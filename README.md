@@ -9,6 +9,5 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: USTH ICT1 
-* Student ID: Nguyen Hoang Minh
-
+* Student Name: Nguyen Hoang Minh 
+* Student ID: 22BI13291
