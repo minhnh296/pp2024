@@ -24,7 +24,7 @@ class Smanagement:
     
     # Function to input student details and add them to the list
     def Sinput(self):
-        student_id = int(input("Enter student ID: "))
+        student_id = str(input("Enter student ID: "))
         name = input("Enter student name: ")
         dob = input("Enter student DoB: ")
         student = Student(student_id, name, dob)
@@ -87,16 +87,16 @@ class Mmanagement:
         student_id = input("Enter student ID: ")
         course_name = input("Enter course Name: ")
 
-        # Check if the entered student and course exist
+    # Check if the entered student and course exist
         student = next((s for s in students if s.id == student_id), None)
-        course = next((c for c in courses if c.n == course_name), None)
+        course = next((c for c in courses if c.name == course_name), None)
 
         if student is not None and course is not None:
             score = input("Enter student score: ")
             mark = Mark(student, course, score)
             self.marks.append(mark)
         else:
-            print("Invalid student ID or course ID.")
+            print("Invalid student ID or course name.")
 
     # Function to list all student, course and mark
     def Mlist(self):
