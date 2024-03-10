@@ -16,15 +16,14 @@ class Student:
         print("Name: ", self.name)
         print("DoB: ", self.dob)
 
-    # Function to provide a string representation of a student
+    # Function to provide a string representation of a student object using overriding
     def __str__(self):
         return f"Id: {self.id}, Name: {self.name}, Dob: {self.dob}"
 
-class Smanagement:
+class Smanagement(Student):
     def __init__(self):
-        # Constructor for the Student Management class
+        # Encapsulation data in the student class
         self.students = []
-    
     
     # Function to input student details and add them to the list
     def Sinput(self):
@@ -54,13 +53,13 @@ class Course:
         print("Name: ", self.name)
         print("Credits:", self.credits)
     
-    # function to provide a string representation of a course
+        # Function to provide a string representation of a Course object using overriding
     def __str__(self):
         return f"Course Id: {self.id}, Course name: {self.name}, Credits: {self.credits}"
 
-class Cmanagement:
+class Cmanagement(Course):
     def __init__(self):
-        # Constructor for the Course Management class
+        # Encapsulation data in the course class
         self.courses = []
 
     # Function to input course details and add them to the list    
@@ -84,12 +83,13 @@ class Mark:
         self.score = math.ceil(float(score) * 10) / 10      # I change it to a decimal rounded to 1 digit when entered with math.ceil()
         self.gpa = self.score / course.credits
 
-    # Function to provide a string representation of a student with mark
+    # Function to provide a string representation of a student with mark using overriding  
     def __str__(self):
         return f"Student: {self.student.name}, Course: {self.course.name}, Score: {self.score}, GPA:{self.gpa}"
 
-class Mmanagement:
+class Mmanagement(Mark):
     def __init__(self):
+        # Encapsulation data in the Mark class
         self.marks = []
 
     # Function to input mark details and add them to the list
@@ -114,14 +114,14 @@ class Mmanagement:
         for index in sortt:
             print(self.marks[index])
             
-def main(stdscr):
-    curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
-    RED_AND_BLACK = curses.color_pair(1)
-    
-    stdscr.clear()
-    stdscr.addstr(5,5,"tu as été trompé, hahahahahahahahahahahahahahahahahahahaha", RED_AND_BLACK)
-    stdscr.refresh()
-    stdscr.getch()
+class gui:
+    def main(stdscr):
+        curses.init_pair(1, curses.COLOR_RED, curses.COLOR_WHITE)
+        RED_AND_WHITE = curses.color_pair(1)    
+        stdscr.clear()
+        stdscr.addstr(5,5,"tu as été trompé, hahahahahahahahahahahahahahahahahahahaha", RED_AND_WHITE)
+        stdscr.refresh()
+        stdscr.getch()
     
 # Create instances of the management classes
 if __name__ == "__main__": 
@@ -156,6 +156,6 @@ if __name__ == "__main__":
         elif option == 6:
             MM.Mlist()
         elif option == 7:
-            curses.wrapper(main)
+            curses.wrapper(gui.main)
         else:
             print("Invalid input. Please try again!")

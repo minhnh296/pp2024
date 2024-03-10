@@ -12,13 +12,13 @@ class Student:
         print("DoB: ", self.dob)
     
 
-    # Function to provide a string representation of a student
+    # Function to provide a string representation of a student object using overriding
     def __str__(self):
         return f"Id: {self.id}, Name: {self.name}, Dob: {self.dob}"
 
-class Smanagement:
+class Smanagement(Student):
     def __init__(self):
-        # Constructor for the Student Management class
+        # Encapsulation data in the student class
         self.students = []
     
     
@@ -46,13 +46,13 @@ class Course:
         print("Id: ", self.id)
         print("Name: ", self.name)
     
-    # function to provide a string representation of a course
+    # Function to provide a string representation of a Course object using overriding
     def __str__(self):
         return f"Course Id: {self.id}, Course name: {self.name}"
 
-class Cmanagement:
+class Cmanagement(Course):
     def __init__(self):
-        # Constructor for the Course Management class
+        # Encapsulation data in the course class
         self.courses = []
 
     # Function to input course details and add them to the list    
@@ -74,12 +74,13 @@ class Mark:
         self.course = course
         self.score = score
 
-    # Function to provide a string representation of a student with mark
+    # Function to provide a string representation of a student with mark using overriding  
     def __str__(self):
         return f"Student: {self.student.name}, Course: {self.course.name}, Score: {self.score}"
 
-class Mmanagement:
+class Mmanagement(Mark):
     def __init__(self):
+        # Encapsulation data in the Mark class
         self.marks = []
 
     # Function to input mark details and add them to the list

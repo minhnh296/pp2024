@@ -1,9 +1,6 @@
 import curses
 from input import Smanagement, Cmanagement, Mmanagement
-from domains.student import Student
-from domains.course import Course
-from domains.mark import Mark
-from output import main as output_main
+from output import main as outmain
 
 if __name__ == "__main__":
     SM = Smanagement()
@@ -37,6 +34,6 @@ if __name__ == "__main__":
         elif option == 6:
             MM.Mlist()
         elif option == 7:
-            curses.wrapper(output_main)
+            curses.wrapper(outmain)
         else:
             print("Invalid input. Please try again!")
