@@ -34,7 +34,7 @@ def Clist():
     return courselist
 
 # function to input marks for student in the course
-def marks(student, course):
+def imarks(student, course):
     mark = float(input(f"Enter the mark for ID: {student['ID']} in the course name: {course['Name']}: "))
     return {"course": course, "student": student, "mark": mark}
 
@@ -52,7 +52,7 @@ def Cdisplay(courses):
 
 # Function to display the list of mark
 def Mdisplay(marks):
-    print("\n input mark list")
+    print("\n Mark list: ")
     for mark in marks:
         print(f"Student ID: {mark['student']['ID']} - Name: {mark['student']['Name']} - DOB: {mark['student']['DOB']} - Course: {mark['course']['Name']} - Mark: {mark['mark']}")
 
@@ -92,7 +92,7 @@ def main():
         elif option == 5:
             Cdisplay(courses)
         elif option == 6:
-            inputDisplay(marks)
+            Mdisplay(marks)
         else:
             print("Invalid input. Please try again!")
 
