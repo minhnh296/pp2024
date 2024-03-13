@@ -83,7 +83,7 @@ def main():
         elif option == 3:
             for student in students:
                 for course in courses:
-                    mark = inputmarks(student, course)
+                    mark = imarks(student, course)
                     marks.append(mark)
                     print(f"Mark entered: {mark['mark']}")
 
