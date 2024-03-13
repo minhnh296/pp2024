@@ -34,7 +34,7 @@ def Clist():
     return courselist
 
 # function to input marks for student in the course
-def inputmarks(student, course):
+def marks(student, course):
     mark = float(input(f"Enter the mark for ID: {student['ID']} in the course name: {course['Name']}: "))
     return {"course": course, "student": student, "mark": mark}
 
@@ -51,10 +51,10 @@ def Cdisplay(courses):
         print(f"ID: {course['ID']} - Name: {course['Name']}")
 
 # Function to display the list of mark
-def inputDisplay(marks):
+def Mdisplay(marks):
     print("\n input mark list")
     for mark in marks:
-        print(f"Student ID: {mark['student']['ID']} - Name: {mark['student']['Name']} - Dob: {mark['student']['DOB']} - Course: {mark['course']['Name']} - Mark: {mark['mark']}")
+        print(f"Student ID: {mark['student']['ID']} - Name: {mark['student']['Name']} - DOB: {mark['student']['DOB']} - Course: {mark['course']['Name']} - Mark: {mark['mark']}")
 
 def main():
     # Initialize the list for DATA option
