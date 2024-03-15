@@ -4,11 +4,11 @@ import zipfile
 from input import Smanagement, Cmanagement, Mmanagement
 from output import main as outmain
 
-def compression(names, dat):
-    with zipfile.ZipFile(dat, "w") as zipf:
-        for name in names:
-            zipf.write(name, os.path.basename(name))
-            
+class compress:
+    def compression(names, dat):
+        with zipfile.ZipFile(dat, "w") as zipf:
+            for name in names:
+                zipf.write(name, os.path.basename(name))
 
 if __name__ == "__main__":
     SM = Smanagement()
@@ -60,4 +60,4 @@ names = [
     'pw5/domains/mark.py'
 ]
 dat = 'students.dat'
-compression(names, dat)
+compress.compression(names, dat)
