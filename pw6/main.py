@@ -1,6 +1,7 @@
 import curses
 import os
 import zipfile
+import pickle
 from input import Smanagement, Cmanagement, Mmanagement
 from output import main as outmain
 
