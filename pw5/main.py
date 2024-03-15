@@ -51,6 +51,13 @@ if __name__ == "__main__":
             curses.wrapper(outmain)
         else:
             print("Invalid input. Please try again!")
-names =['input.py', 'output.py', 'domains/student.py', 'domains/course.py', 'domains/mark.py', 'main.py']
-dat = 'students.dat'    
+names = [
+    'pw5/input.py',
+    'pw5/output.py',
+    'pw5/main.py',
+    'pw5/domains/student.py',
+    'pw5/domains/course.py',
+    'pw5/domains/mark.py'
+]
+dat = 'students.dat'
 compression(names, dat)
