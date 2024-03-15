@@ -71,7 +71,7 @@ def main():
     4. Students list
     5. Courses list
     6. Display marks
-    
+    e
     """)
         option = int(input("Your choice: "))  # Choose option from 0 -> n
         if option == 0:

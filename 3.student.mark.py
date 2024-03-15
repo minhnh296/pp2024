@@ -9,12 +9,6 @@ class Student:
         self.name = name
         self.dob = dob
         self.gpa = 0
-    
-    # Function to print the details of a student
-    def describe(self):
-        print("Id: ", self.id)
-        print("Name: ", self.name)
-        print("DoB: ", self.dob)
 
     # Function to provide a string representation of a student object using overriding
     def __str__(self):
@@ -46,13 +40,6 @@ class Course:
         self.name = name
         self.credits = credits
         
-    
-    # Method to print the details of a course
-    def describe(self):
-        print("Id: ", self.id)
-        print("Name: ", self.name)
-        print("Credits:", self.credits)
-    
         # Function to provide a string representation of a Course object using overriding
     def __str__(self):
         return f"Course Id: {self.id}, Course name: {self.name}, Credits: {self.credits}"
@@ -66,7 +53,7 @@ class Cmanagement(Course):
     def Cinput(self):
         course_id = str(input("Enter course ID: "))
         name = input("Enter course name: ")
-        credits = int(input("Enter credits "))
+        credits = int(input("Enter credits: "))
         course = Course(course_id, name, credits)
         self.courses.append(course)
 

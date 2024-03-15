@@ -5,16 +5,9 @@ class Student:
         self.name = name
         self.dob = dob
     
-    # Function to print the details of a student
-    def describe(self):
-        print("Id: ", self.id)
-        print("Name: ", self.name)
-        print("DoB: ", self.dob)
-    
-
     # Function to provide a string representation of a student object using overriding
     def __str__(self):
-        return f"Id: {self.id}, Name: {self.name}, Dob: {self.dob}"
+        return f"Id: {self.id} - Name: {self.name} - Dob: {self.dob}"
 
 class Smanagement(Student):
     def __init__(self):
@@ -40,11 +33,6 @@ class Course:
         # Constructor for the Course class
         self.id = course_id
         self.name = name
-    
-    # Method to print the details of a course
-    def describe(self):
-        print("Id: ", self.id)
-        print("Name: ", self.name)
     
     # Function to provide a string representation of a Course object using overriding
     def __str__(self):
